@@ -1,0 +1,85 @@
+{
+    "name": "deecodek/larapdfx",
+    "description": "Modern, production-ready PDF generation for Laravel with full CSS3 support, perfect rendering, and advanced features.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "pdf",
+        "pdf-generation",
+        "html-to-pdf",
+        "css3",
+        "flexbox",
+        "modern-pdf",
+        "chromium",
+        "puppeteer",
+        "larapdfx",
+        "browsershot",
+        "laravel-pdf"
+    ],
+    "homepage": "https://github.com/deecodek/larapdfx",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Deepak",
+            "email": "deepakddm1@gmail.com",
+            "homepage": "https://github.com/deecodek",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/deecodek/larapdfx/issues",
+        "source": "https://github.com/deecodek/larapdfx"
+    },
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "spatie/browsershot": "^4.0|^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0",
+        "mockery/mockery": "^1.6",
+        "phpstan/phpstan": "^1.10",
+        "laravel/pint": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Deecodek\\LaraPDFX\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Deecodek\\LaraPDFX\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Deecodek\\LaraPDFX\\LaraPDFXServiceProvider"
+            ],
+            "aliases": {
+                "PDF": "Deecodek\\LaraPDFX\\Facades\\PDF"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
