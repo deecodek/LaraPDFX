@@ -14,7 +14,7 @@ return [
 
     'paper' => [
         'format' => env('LARAPDFX_PAPER_FORMAT', 'A4'),
-        
+
         'margins' => [
             'top' => env('LARAPDFX_MARGIN_TOP', 10),
             'right' => env('LARAPDFX_MARGIN_RIGHT', 10),
@@ -29,7 +29,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Path to Chrome or Chromium executable. Leave null for auto-detection.
-    | 
+    |
     | Linux: /usr/bin/google-chrome or /usr/bin/chromium-browser
     | macOS: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
     | Windows: C:\Program Files\Google\Chrome\Application\chrome.exe

@@ -2,9 +2,9 @@
 
 namespace Deecodek\LaraPDFX;
 
-use Illuminate\Support\ServiceProvider;
 use Deecodek\LaraPDFX\Console\InstallCommand;
 use Deecodek\LaraPDFX\Console\TestCommand;
+use Illuminate\Support\ServiceProvider;
 
 class LaraPDFXServiceProvider extends ServiceProvider
 {
@@ -18,7 +18,7 @@ class LaraPDFXServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton('larapdfx', function ($app) {
-            return new PDF();
+            return new PDF;
         });
     }
 
@@ -43,8 +43,6 @@ class LaraPDFXServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
-     *
-     * @return array
      */
     public function provides(): array
     {

@@ -6,8 +6,6 @@ trait HasPageSettings
 {
     /**
      * Set page size to A4.
-     *
-     * @return static
      */
     public function a4(): static
     {
@@ -16,8 +14,6 @@ trait HasPageSettings
 
     /**
      * Set page size to A3.
-     *
-     * @return static
      */
     public function a3(): static
     {
@@ -26,8 +22,6 @@ trait HasPageSettings
 
     /**
      * Set page size to A5.
-     *
-     * @return static
      */
     public function a5(): static
     {
@@ -36,8 +30,6 @@ trait HasPageSettings
 
     /**
      * Set page size to Letter.
-     *
-     * @return static
      */
     public function letter(): static
     {
@@ -46,8 +38,6 @@ trait HasPageSettings
 
     /**
      * Set page size to Legal.
-     *
-     * @return static
      */
     public function legal(): static
     {
@@ -56,8 +46,6 @@ trait HasPageSettings
 
     /**
      * Set page size to Tabloid.
-     *
-     * @return static
      */
     public function tabloid(): static
     {
@@ -66,8 +54,6 @@ trait HasPageSettings
 
     /**
      * Set page size to Ledger.
-     *
-     * @return static
      */
     public function ledger(): static
     {

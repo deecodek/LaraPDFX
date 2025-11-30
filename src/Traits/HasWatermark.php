@@ -6,10 +6,6 @@ trait HasWatermark
 {
     /**
      * Add text watermark.
-     *
-     * @param string $text
-     * @param array $options
-     * @return static
      */
     public function watermark(string $text, array $options = []): static
     {
@@ -20,29 +16,27 @@ trait HasWatermark
             'color' => '#cccccc',
             'rotation' => -45,
         ], $options);
+
         return $this;
     }
 
     /**
      * Remove watermark.
-     *
-     * @return static
      */
     public function noWatermark(): static
     {
         $this->watermarkText = null;
         $this->watermarkOptions = [];
+
         return $this;
     }
 
     /**
      * Get watermark HTML to inject.
-     *
-     * @return string
      */
     protected function getWatermarkHtml(): string
     {
-        if (!$this->watermarkText) {
+        if (! $this->watermarkText) {
             return '';
         }
 

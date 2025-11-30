@@ -2,7 +2,7 @@
 
 /**
  * Basic PDF Generation Examples
- * 
+ *
  * This file contains simple examples to get started with LaraPDFX
  */
 
@@ -12,7 +12,7 @@ use Deecodek\LaraPDFX\Facades\PDF;
 function example1_simple()
 {
     $html = '<h1>Hello World!</h1><p>This is a simple PDF.</p>';
-    
+
     return PDF::html($html)->download('simple.pdf');
 }
 
@@ -24,7 +24,7 @@ function example2_blade_view()
         'email' => 'john@example.com',
         'date' => now()->format('Y-m-d'),
     ];
-    
+
     return PDF::view('welcome', $data)->download('welcome.pdf');
 }
 
@@ -43,7 +43,7 @@ function example4_save_to_storage()
 {
     PDF::html('<h1>Saved PDF</h1>')
         ->save(storage_path('app/pdfs/saved.pdf'));
-    
+
     return response()->json(['message' => 'PDF saved successfully']);
 }
 
@@ -58,9 +58,9 @@ function example5_stream()
 function example6_base64()
 {
     $base64 = PDF::html('<h1>Base64 PDF</h1>')->base64();
-    
+
     return response()->json([
-        'pdf' => $base64
+        'pdf' => $base64,
     ]);
 }
 
@@ -101,10 +101,10 @@ function example10_shortcuts()
 {
     // A4 Portrait
     PDF::html('<h1>A4</h1>')->a4()->download('a4.pdf');
-    
+
     // Letter Landscape
     PDF::html('<h1>Letter</h1>')->letter()->landscape()->download('letter.pdf');
-    
+
     // Legal
     PDF::html('<h1>Legal</h1>')->legal()->download('legal.pdf');
 }

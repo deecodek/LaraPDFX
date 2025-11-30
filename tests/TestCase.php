@@ -2,8 +2,8 @@
 
 namespace Deecodek\LaraPDFX\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use Deecodek\LaraPDFX\LaraPDFXServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {

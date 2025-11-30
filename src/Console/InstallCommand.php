@@ -78,7 +78,7 @@ class InstallCommand extends Command
             }
         }
 
-        if (!$found) {
+        if (! $found) {
             $this->warn('⚠ Chrome/Chromium not found in default locations.');
             $this->line('  Please install Chrome or set the path in config/larapdfx.php');
             $this->newLine();
